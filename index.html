@@ -24,7 +24,7 @@
             online. If you’re looking for online giving, you can
             <a href="https://pushpay.com/pay/epicsf">give quickly and securely through PushPay</a>.
           </p>
-          <a class="button" href="#" title="Continue to the Internet">Continue to the Internet</a>
+          <a id="continueButton" class="button" href="#" title="Continue to the Internet">Continue to the Internet</a>
         </div>
       </div>
       <div class="footer">
@@ -34,19 +34,26 @@
     </div>
 
     <script type="text/javascript" charset="utf-8">
-      function update_form_action_from_headers(form) {
-        var _request = new XMLHttpRequest();
-        var url = 'https://n169.network-auth.com/splash/login?continue_url=CONTINUE_URL_PLACEHOLDER';
-        _request.open('HEAD', window.location, true);
-        _request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-        _request.onreadystatechange = function() {
-          if (_request.readyState === 4) {
-            var continue_url = _request.getResponseHeader('Continue-Url');
-            form.action = url.replace('CONTINUE_URL_PLACEHOLDER', continue_url);
-            form.submit();
-          }
+      // Parse paramaters
+      var urlParams = new URLSearchParams(window.location.search);
+      var baseGrantUrl    = urlParams.get("base_grant_url");
+      var userContinueUrl = urlParams.get("user_continue_url");
+
+      // Set up click handler
+      var continueButton = document.getElementById('continueButton');
+      continueButton.onclick = authUser;
+
+      function authUser() {
+        if (baseGrantUrl === null || userContinueUrl === null) {
+          console.log("Can't log in, missing base_grant_url or user_continue_url param.")
+          return false;
         }
-        _request.send(null);
+
+        var loginUrl = decodeURIComponent(baseGrantUrl) + "?continue_url=" + decodeURIComponent(userContinueUrl);
+        console.log("Logging in…", loginUrl);
+        // redirect browser to meraki auth URL.
+        window.location.href = loginUrl;
+
         return false;
       }
     </script>
