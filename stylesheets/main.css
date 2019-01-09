@@ -301,3 +301,8 @@ a.button, a.button:visited, a.button:active {
 .copy {
   max-width: 390px; margin-left: auto; margin-right: auto; text-align: left;
 }
+
+.pushpay-button {
+  width: 350px;
+  max-width: 100%;
+}
