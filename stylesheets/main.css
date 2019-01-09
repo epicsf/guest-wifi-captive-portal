@@ -10,6 +10,7 @@ button, input {
   line-height: normal;
   *overflow: visible;
 }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 
 .hidden { display: none; }
 
@@ -164,8 +165,6 @@ p{
   border-radius: 3px;
   display: inline-block;
   margin: 1em 0;
-  border: 0;
-  cursor: pointer;
 }
 
 .button:hover {
@@ -294,6 +293,10 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 
 a, a:visited, a:active {
   color: #444;
+}
+
+a.button, a.button:visited, a.button:active {
+  text-decoration: none;
 }
 
 .copy {
