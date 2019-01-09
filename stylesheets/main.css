@@ -55,10 +55,6 @@ p{
 .header table { width: 100%; }
 #title_cell { vertical-align: bottom; }
 #icon_cell { text-align: center; }
-#icon_cell img {
-  max-width:150px;
-  max-height: 100px;
-}
 
 #container {
   max-width: 900px;
