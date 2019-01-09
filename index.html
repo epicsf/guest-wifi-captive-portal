@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head><meta name='robots' content='none' />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Welcome to Epic Church</title>
-  <link href="stylesheets/main.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-</head>
-
-<body>
-  <div id="content">
-    <div id="container">
-      <div class="header">
-        <div id="icon_cell">
-          <img src="images/epic-logo-600.png" />
+  <head>
+    <title>
+      Welcome to Epic Church
+    </title>
+    <meta name='robots' content='none'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="stylesheets/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="content">
+      <div id="container">
+        <div class="header">
+          <div id="icon_cell">
+            <img src="images/epic-logo-600.png">
+          </div>
+        </div>
+        <div id="continue">
+          <h1>Welcome to Epic Church</h1>
+          <p class="copy">
+            We're so glad you're here. Click the button below to get online. If you're looking for online giving, you can <a href="https://pushpay.com/pay/epicsf">give quickly and securely through PushPay</a>.
+          </p>
+          <a class="button" href="#" title="Continue to the Internet">Continue to the Internet</a>
         </div>
       </div>
-
-      <div id="continue">
-        <h1>Welcome to Epic Church</h1>
-        <p class="copy">
-          We're so glad you're here. Click the button below to get online.
-          If you're looking for online giving, you can
-          <a href="https://pushpay.com/pay/epicsf">give quickly and securely through PushPay</a>.
-        </p>
-        <a class="button" href="#" title="Continue to the Internet">Continue to the Internet</a>
-
+      <div class="footer">
+        <h3>POWERED BY</h3>
+        <img alt="Cisco Meraki" src="images/cisco-meraki-gray.png" width="100">
       </div>
     </div>
-    <div class="footer">
-      <h3>POWERED BY</h3>
-      <img alt="Cisco Meraki" src="images/cisco-meraki-gray.png" width="100" />
-    </div>
-  </div>
 
-      <script type="text/javascript" charset="utf-8">
-        
-              function update_form_action_from_headers(form) {
+    <script type="text/javascript" charset="utf-8">
+      function update_form_action_from_headers(form) {
         var _request = new XMLHttpRequest();
         var url = 'https://n169.network-auth.com/splash/login?continue_url=CONTINUE_URL_PLACEHOLDER';
         _request.open('HEAD', window.location, true);
@@ -50,9 +47,6 @@
         _request.send(null);
         return false;
       }
-
-        
-      </script>
-
-</body>
+    </script>
+  </body>
 </html>
