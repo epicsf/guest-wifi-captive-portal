@@ -153,11 +153,15 @@ p{
 }
 
 .button {
+  font-weight: bold;
+  font-size: 110%;
   color: #ffffff;
   background: #777777;
   padding: 1em 2em;
+  padding-bottom: 0.8em;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  border: 1px solid transparent;
   display: inline-block;
   margin: 1em 0;
 }
@@ -301,4 +305,17 @@ a.button, a.button:visited, a.button:active {
 .pushpay-button {
   width: 350px;
   max-width: 100%;
+}
+
+#cardButton {
+  color: #28a745;
+  border-color: #28a745;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+#continueButton {
+  color: #343a40;
+  border-color: #343a40;
+  background-color: transparent;
 }

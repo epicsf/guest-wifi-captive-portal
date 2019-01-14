@@ -22,13 +22,19 @@
           <p class="copy">
             We’re so glad you’re here. Click the button below to get
             online. If you’re looking for online giving, you can
-            <a href="https://pushpay.com/pay/epicsf">give quickly and securely through PushPay</a>.
+            <a class="external" href="https://pushpay.com/pay/epicsf">give quickly and securely through PushPay</a>.
           </p>
-          <a id="continueButton" class="button" role="button" href="#" title="Continue to the Internet">Continue to the Internet</a>
-          <br>
-          <a role="button" href="https://pushpay.com/pay/epicsf">
-            <img class="pushpay-button" src="images/pushpay-button-08.png" alt="Donations powered by PushPay">
-          </a>
+          <p>
+            <a class="button" role="button" href="card.html" id="cardButton" title="Communication Card">Communication Card</a>
+          </p>
+          <p>
+            <a class="button external" role="button" href="#" id="continueButton" title="Continue to the Internet">Continue to the Internet</a>
+          </p>
+          <p>
+            <a class="external" role="button" href="https://pushpay.com/pay/epicsf">
+              <img class="pushpay-button" src="images/pushpay-button-08.png" alt="Donations powered by PushPay">
+            </a>
+          </p>
         </div>
       </div>
       <div class="footer">
@@ -50,7 +56,7 @@
       }
 
       // Set up link handler
-      var links = document.querySelectorAll('a');
+      var links = document.querySelectorAll('a.external');
       links.forEach(function (link) {
         link.onclick = authUserAndContinue;
       });
