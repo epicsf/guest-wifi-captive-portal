@@ -4,9 +4,9 @@ task :deploy do
   sh %Q{
     s3cmd sync public/ s3://epic-guest-wifi-captive-portal/ \
       --config .s3cfg \
+      --cf-invalidate \
       --delete-removed \
       --acl-public \
       --verbose \
   }
-      # --cf-invalidate \
 end
