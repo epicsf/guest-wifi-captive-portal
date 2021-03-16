@@ -47,7 +47,7 @@ p{
 }
 
 .header {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #00263A;
   padding: 2em 0;
   margin: 0 0 2em 0;
 }
@@ -60,12 +60,12 @@ p{
   max-width: 900px;
   min-width: 300px;
   margin: 0 auto;
-  background: #fff;
+  background: #FFFBF6;
   text-align: center;
 }
 
 #content {
-  background: #fff;
+  background: #FFFBF6;
 }
 
 #continue {
@@ -308,14 +308,14 @@ a.button, a.button:visited, a.button:active {
 }
 
 #cardButton {
-  color: #28a745;
-  border-color: #28a745;
-  background-color: transparent;
+  color: white;
+  border-color: black;
+  background-color: #00263A;
   font-weight: bold;
 }
 
 #continueButton {
-  color: #343a40;
-  border-color: #343a40;
+  color: #00263A;
+  border-color: #00263A;
   background-color: transparent;
 }
