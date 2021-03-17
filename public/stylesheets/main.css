@@ -302,16 +302,14 @@ a.button, a.button:visited, a.button:active {
   max-width: 390px; margin-left: auto; margin-right: auto; text-align: left;
 }
 
-.pushpay-button {
-  width: 350px;
-  max-width: 100%;
-}
-
+#giveButton,
 #cardButton {
   color: white;
   border-color: black;
   background-color: #00263A;
   font-weight: bold;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 #continueButton {
